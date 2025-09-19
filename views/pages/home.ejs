@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight"><%= data.personal.name %></span></h1>
+                <h2 class="hero-subtitle"><%= data.personal.title %></h2>
+                <p class="hero-description"><%= data.personal.bio %></p>
+                <div class="hero-actions">
+                    <a href="/portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="/about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Overview Section -->
+        <section class="overview">
+            <div class="container">
+                <h2 class="section-title">Portfolio Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Academic background and qualifications that shaped my foundation in technology.</p>
+                        <a href="/education" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>Professional journey and key roles that have developed my expertise.</p>
+                        <a href="/experience" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Skills</h3>
+                        <p>Technical skills and tools that I use to create amazing solutions.</p>
+                        <a href="/skills" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Portfolio</h3>
+                        <p>Showcase of projects and applications that demonstrate my capabilities.</p>
+                        <a href="/portfolio" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>About Me</h3>
+                        <p>Personal story, interests, and what drives my passion for development.</p>
+                        <a href="/about" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Extracurricular</h3>
+                        <p>Activities, contributions, and involvement beyond professional work.</p>
+                        <a href="/extracurricular" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Work Together?</h2>
+                <p>Let's discuss how we can bring your ideas to life.</p>
+                <a href="mailto:<%= data.personal.contact.email %>" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('../partials/footer') %>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

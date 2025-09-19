@@ -1,0 +1,31 @@
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3><%= (portfolioData ? portfolioData.personal.name : data.personal.name) %></h3>
+            <p><%= (portfolioData ? portfolioData.personal.bio : data.personal.bio) %></p>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> <%= (portfolioData ? portfolioData.personal.contact.email : data.personal.contact.email) %></p>
+            <p><i class="fas fa-phone"></i> <%= (portfolioData ? portfolioData.personal.contact.phone : data.personal.contact.phone) %></p>
+            <p><i class="fas fa-map-marker-alt"></i> <%= (portfolioData ? portfolioData.personal.contact.location : data.personal.contact.location) %></p>
+        </div>
+        <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+                <a href="<%= (portfolioData ? portfolioData.personal.social.github : data.personal.social.github) %>" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="<%= (portfolioData ? portfolioData.personal.social.linkedin : data.personal.social.linkedin) %>" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="<%= (portfolioData ? portfolioData.personal.social.twitter : data.personal.social.twitter) %>" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <%= new Date().getFullYear() %> <%= (portfolioData ? portfolioData.personal.name : data.personal.name) %>. All rights reserved.</p>
+    </div>
+</footer>
