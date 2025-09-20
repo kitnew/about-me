@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS Variables for theming */
+:root {
+  --bg: #E9EBEC; /* white */
+  --fg: #111419;    /* slate-900 */
+  --muted: #6B7280; /* gray-500 */
+  --primary: #2563EB; /* blue-600 */
+  --primary-contrast: #FFFFFF;
+  --ring: #4F46E5; /* indigo-600 */
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg: #0B0F14;
+  --fg: #E5E7EB;
+  --muted: #9CA3AF;
+  --primary: #60A5FA; /* blue-400 */
+  --primary-contrast: #0B0F14;
+  --ring: #93C5FD; /* blue-300 */
+}
+
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Typography */
+h1 { font-size: 2rem; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.25; }
+h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.3; }
+p { color: var(--fg); }
+small, .muted { color: var(--muted); }
+
+/* Layout helpers 
+.container { max-width: 72rem; }
+*/
+
+/* Theme toggle button: fixed at top center, 80x80 */
+.theme-button {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 50;
+}
+.theme-button img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+.theme-button:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+
+/* Intro section (centered), 65px below top */
+.intro-section {
+  margin-top: 65px;
+}
+.intro-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space to the right of the photo before the name */
+}
+.intro-photo {
+  width: 215px;
+  height: 215px;
+  object-fit: cover;
+  display: block;
+}
+.intro-name {
+  font-size: 46px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--fg);
+}
+.intro-position {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-top: 3px; /* offset below the name */
+  color: var(--muted);
+}
+.intro-icons {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 26px;
+}
+.intro-github-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* Profile facts */
+.profile-facts-section {
+  margin-top: 28px;
+}
+
+.profile-facts-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.profile-facts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.profile-facts-item-title {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.profile-facts-item-description {
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Profile buttons */
+.profile-buttons-section {
+  margin-top: 27px;
+}
+
+.profile-buttons-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+
+.profile-button {
+  width: 290px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FBD144; /* yellow-400 */
+  color: #3D3D3D; /* dark text for contrast */
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Main buttons */
+.main-buttons-section {
+  margin-top: 34px;
+}
+
+.main-buttons-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.main-button {
+  width: 225px;
+  height: 71px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FBD144; /* yellow-400 */
+  color: #3D3D3D; /* dark text for contrast */
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  margin-top: 34px;
+}
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-text {
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--muted);
+}
